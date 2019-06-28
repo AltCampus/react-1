@@ -2,7 +2,6 @@
   text-align: center;
 }
 
-
 button {
   display: block !important;
   margin: 20px !important;
@@ -16,7 +15,7 @@ button {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  -webkit-transition-duration: 0.4s; 
+  -webkit-transition-duration: 0.4s;
   transition-duration: 0.4s;
 
   &:hover {
@@ -44,6 +43,10 @@ button {
   background-color: #23d160;
 }
 
+.purple {
+  background-color: purple;
+}
+
 .info {
   background-color: #209cee;
 }
@@ -63,3 +66,13 @@ button {
 .large {
   font-size: 20px;
 }
+
+.squircle {
+  border-radius: 5px;
+}
+
+// .dark {
+//   body:first-child & {
+//     background: rgb(70, 67, 67) !important;
+//   }
+// }
