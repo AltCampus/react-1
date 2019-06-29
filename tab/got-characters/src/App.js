@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "bulma/css/bulma.css";
 import Header from "./components/Header";
 import HouseView from "./components/HouseView";
+import CharacterView from './components/CharacterView';
 
 class App extends Component {
   constructor(props) {
@@ -31,6 +32,7 @@ class App extends Component {
             handleClick={this.handleClick}
             activeTab={this.state.selectedTab}
           />
+          <HouseView/>
         </div>
       </>
     );
