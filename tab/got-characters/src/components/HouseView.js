@@ -14,7 +14,7 @@ class HouseView extends Component {
               this.props.housenames.map((house, i) => {
                 return (
                   <li className={i === this.props.activeTab ? "is-active" : ""}>
-                    <a href='_blank'>
+                    <a>
                       <span onClick={() => this.props.handleClick(i)}>
                         {house.name}
                       </span>

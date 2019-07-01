@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "bulma/css/bulma.css";
+import "./App.scss";
 import Header from "./components/Header";
 import HouseView from "./components/HouseView";
 import DisplayCards from "./components/DIsplayCards";
@@ -35,7 +36,7 @@ class App extends Component {
             handleClick={this.handleClick}
             activeTab={this.state.selectedTab}
           />
-          <div className="columns is-multiline">
+          <div className="columns is-multiline characterParent">
             {this.state.data.houses &&
               this.state.data.houses[this.state.selectedTab].people.map(character => (
                 <DisplayCards {...character} />

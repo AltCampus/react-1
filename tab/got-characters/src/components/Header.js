@@ -9,7 +9,7 @@ class Header extends Component {
         return (
             <div className="header">
             <div className="title has-text-centered">
-              <h1>Peoples of GOT</h1>
+              <h1 className='is-capitalized'>Peoples of GOT</h1>
             </div>
           </div>
         );

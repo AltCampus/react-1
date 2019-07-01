@@ -4,15 +4,15 @@ export default function DisplayCards({ name, image, description }) {
     <>
       <div className="column is-one-quarter">
         <div className="card">
-          <div className="card-content">
+          <div className="card-content characterCard">
             <div className="media">
               <div className="media-left">
                 <figure className="image is-48x48">
-                  <img src={image} />
+                  <img alt= '' src={image} />
                 </figure>
               </div>
               <div className="media-content">
-                <p className="title is-4">{name}</p>
+                <p className="title is-4 characterName">{name}</p>
               </div>
             </div>
 
