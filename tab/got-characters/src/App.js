@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "bulma/css/bulma.css";
 import Header from "./components/Header";
 import HouseView from "./components/HouseView";
-import CharacterView from './components/CharacterView';
+import DisplayCards from "./components/DIsplayCards";
 
 class App extends Component {
   constructor(props) {
@@ -12,9 +12,7 @@ class App extends Component {
       selectedTab: 0
     };
   }
-  handleClick = tab => {
-    this.setState({ selectedTab: tab });
-  };
+
   componentDidMount() {
     fetch(
       "https://raw.githubusercontent.com/nnnkit/json-data-collections/master/got-houses.json"
@@ -22,6 +20,11 @@ class App extends Component {
       .then(res => res.json())
       .then(data => this.setState({ data }));
   }
+
+  handleClick = tab => {
+    this.setState({ selectedTab: tab });
+  };
+
   render() {
     return (
       <>
@@ -32,7 +35,12 @@ class App extends Component {
             handleClick={this.handleClick}
             activeTab={this.state.selectedTab}
           />
-          <HouseView/>
+          <div className="columns is-multiline">
+            {this.state.data.houses &&
+              this.state.data.houses[this.state.selectedTab].people.map(character => (
+                <DisplayCards {...character} />
+              ))}
+          </div>
         </div>
       </>
     );
