@@ -9,9 +9,7 @@ body {
 .App {
   text-align: center;
 }
-.tabs {
-  // margin: 50px 0;
-}
+
 .characterParent {
   margin: 50px;
 }
@@ -23,12 +21,34 @@ body {
 h1 {
   // font-family: "Dokdo", cursive;
   font-family: "Sedgwick Ave Display", cursive;
-  color: #39cf81;
+  color: #b8b8b8;
   font-weight: bold;
+  font-size: 45px;
+
 }
 
-.isactive {
-  background: #1fe7bc;
+.tabs {
+
+  ul {
+    border: none;
+  }
+  li {
+    background: #1a1a1a;
+  }
+  
+  .is-active a {
+    color: white;
+    background: #39cf81 !important ;
+  }
+
+  a {
+    background: #1a1a1a;
+    border-color: #1A1A1A !important ;
+
+    
+  }
+ 
+  
 }
 
 .characterCard {
